@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072045E72A947E300047E223 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072045E62A947E300047E223 /* CircularProgressBar.swift */; };
 		07BADF662A944468007C11A1 /* check_list_planApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF652A944468007C11A1 /* check_list_planApp.swift */; };
 		07BADF682A944468007C11A1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF672A944468007C11A1 /* Persistence.swift */; };
-		07BADF6B2A944468007C11A1 /* check_list_plan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF692A944468007C11A1 /* check_list_plan.xcdatamodeld */; };
 		07BADF6D2A944468007C11A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF6C2A944468007C11A1 /* ContentView.swift */; };
 		07BADF6F2A944469007C11A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BADF6E2A944469007C11A1 /* Assets.xcassets */; };
 		07BADF732A944469007C11A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BADF722A944469007C11A1 /* Preview Assets.xcassets */; };
 		07BADF7D2A944469007C11A1 /* check_list_planTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF7C2A944469007C11A1 /* check_list_planTests.swift */; };
 		07BADF872A944469007C11A1 /* check_list_planUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF862A944469007C11A1 /* check_list_planUITests.swift */; };
 		07BADF892A944469007C11A1 /* check_list_planUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF882A944469007C11A1 /* check_list_planUITestsLaunchTests.swift */; };
+		07BADF962A944BF8007C11A1 /* AlertListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF952A944BF8007C11A1 /* AlertListView.swift */; };
+		07BADF982A944E65007C11A1 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF972A944E65007C11A1 /* ItemView.swift */; };
+		07BADF9B2A94541D007C11A1 /* DataModelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF992A94541D007C11A1 /* DataModelApp.xcdatamodeld */; };
+		07BADF9D2A945E03007C11A1 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BADF9C2A945E03007C11A1 /* AddItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072045E62A947E300047E223 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		07BADF622A944468007C11A1 /* check-list-plan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "check-list-plan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BADF652A944468007C11A1 /* check_list_planApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = check_list_planApp.swift; sourceTree = "<group>"; };
 		07BADF672A944468007C11A1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		07BADF6A2A944468007C11A1 /* check_list_plan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = check_list_plan.xcdatamodel; sourceTree = "<group>"; };
 		07BADF6C2A944468007C11A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		07BADF6E2A944469007C11A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07BADF702A944469007C11A1 /* check_list_plan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = check_list_plan.entitlements; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		07BADF822A944469007C11A1 /* check-list-planUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "check-list-planUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BADF862A944469007C11A1 /* check_list_planUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = check_list_planUITests.swift; sourceTree = "<group>"; };
 		07BADF882A944469007C11A1 /* check_list_planUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = check_list_planUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07BADF952A944BF8007C11A1 /* AlertListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListView.swift; sourceTree = "<group>"; };
+		07BADF972A944E65007C11A1 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		07BADF9A2A94541D007C11A1 /* DataModelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModelApp.xcdatamodel; sourceTree = "<group>"; };
+		07BADF9C2A945E03007C11A1 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +112,12 @@
 				07BADF6C2A944468007C11A1 /* ContentView.swift */,
 				07BADF6E2A944469007C11A1 /* Assets.xcassets */,
 				07BADF702A944469007C11A1 /* check_list_plan.entitlements */,
-				07BADF692A944468007C11A1 /* check_list_plan.xcdatamodeld */,
 				07BADF712A944469007C11A1 /* Preview Content */,
+				07BADF952A944BF8007C11A1 /* AlertListView.swift */,
+				07BADF972A944E65007C11A1 /* ItemView.swift */,
+				07BADF992A94541D007C11A1 /* DataModelApp.xcdatamodeld */,
+				07BADF9C2A945E03007C11A1 /* AddItemView.swift */,
+				072045E62A947E300047E223 /* CircularProgressBar.swift */,
 			);
 			path = "check-list-plan";
 			sourceTree = "<group>";
@@ -265,7 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07BADF6B2A944468007C11A1 /* check_list_plan.xcdatamodeld in Sources */,
+				07BADF9B2A94541D007C11A1 /* DataModelApp.xcdatamodeld in Sources */,
+				07BADF982A944E65007C11A1 /* ItemView.swift in Sources */,
+				07BADF9D2A945E03007C11A1 /* AddItemView.swift in Sources */,
+				072045E72A947E300047E223 /* CircularProgressBar.swift in Sources */,
+				07BADF962A944BF8007C11A1 /* AlertListView.swift in Sources */,
 				07BADF662A944468007C11A1 /* check_list_planApp.swift in Sources */,
 				07BADF6D2A944468007C11A1 /* ContentView.swift in Sources */,
 				07BADF682A944468007C11A1 /* Persistence.swift in Sources */,
@@ -419,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "check-list-plan/check_list_plan.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -433,10 +450,11 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -445,10 +463,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosdanieldev.check-list-plan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "check-list-plan/check_list_plan.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -471,10 +492,11 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -483,10 +505,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosdanieldev.check-list-plan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -622,13 +646,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		07BADF692A944468007C11A1 /* check_list_plan.xcdatamodeld */ = {
+		07BADF992A94541D007C11A1 /* DataModelApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				07BADF6A2A944468007C11A1 /* check_list_plan.xcdatamodel */,
+				07BADF9A2A94541D007C11A1 /* DataModelApp.xcdatamodel */,
 			);
-			currentVersion = 07BADF6A2A944468007C11A1 /* check_list_plan.xcdatamodel */;
-			path = check_list_plan.xcdatamodeld;
+			currentVersion = 07BADF9A2A94541D007C11A1 /* DataModelApp.xcdatamodel */;
+			path = DataModelApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

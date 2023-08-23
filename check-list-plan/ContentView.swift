@@ -1,74 +1,95 @@
-//
-//  ContentView.swift
-//  check-list-plan
-//
-//  Created by Carlos on 21/08/23.
-//
-
 import SwiftUI
 import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var showingAlert = false
+    @State private var listName = ""
+    @State private var updateFlag = false
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        entity: WorkList.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \WorkList.label, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var lists: FetchedResults<WorkList>
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                ForEach(lists) { list in
+                    NavigationLink(destination: ItemView(list: list)) {
+                        HStack {
+                            Text(list.label ?? "Lista sem nome")
+                            Spacer()
+                
+                            let progressValue = calculateProgress(for: list)
+                            
+                            if progressValue == -1 {
+                                Image(systemName: "minus.circle.fill")
+                                    .foregroundColor(.gray)
+                            } else if progressValue < 1 {
+                                CircularProgressBar(progress: progressValue)
+                            } else {
+                                Image(systemName: "checkmark.seal.fill")
+                                    .foregroundColor(.green)
+                            }
+                        }
                     }
+                  }
+                .onDelete(perform: deleteLists)
+                .onChange(of: lists.count) { _ in
+                    updateFlag.toggle()
                 }
-                .onDelete(perform: deleteItems)
             }
             .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+                ToolbarItem(placement: .principal) {
+                       HStack {
+                           Spacer()
+                           Spacer()
+                           Text("Check List Plan")
+                           Spacer()
+                       }
+                   }
+
+                   ToolbarItem(placement: .navigationBarTrailing) {
+                       HStack {
+                           EditButton()
+                           Button(action: addList) {
+                               Label("Add Item", systemImage: "plus")
+                           }
+                       }
+                   }
+               
             }
-            Text("Select an item")
-        }
+            
+        }.overlay(
+            Group {
+                if showingAlert {
+                    AddListView(isShowing: $showingAlert, listName: $listName)
+                }
+            }, alignment: .center
+        )
     }
 
-    private func addItem() {
+    func calculateProgress(for list: WorkList) -> Double {
+
+        let completedItems = list.items?.filter { ($0 as! Item).finished }.count ?? 0
+
+        let totalItems = list.items?.count ?? 0
+        return totalItems > 0 ? Double(completedItems) / Double(totalItems) : -1
+    }
+    
+    private func addList() {
+        showingAlert = true
+    }
+
+    private func deleteLists(offsets: IndexSet) {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            offsets.map { lists[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
