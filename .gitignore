@@ -1,0 +1,53 @@
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+profile
+*.moved-aside
+DerivedData
+.idea/
+
+# Swift Package Manager
+#
+.build/
+Packages
+Package.pins
+Package.resolved
+.swift-workspace
+
+# CocoaPods
+#
+Pods/
+
+# Carthage
+#
+Carthage/Build
+
+# fastlane
+#
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Node.js dependencies (if you're using tools like react-native)
+#
+node_modules/
+
+# OS specific files
+#
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Other common files
+#
+*.log
+
