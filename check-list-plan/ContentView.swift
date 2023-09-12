@@ -40,6 +40,9 @@ struct ContentView: View {
                 .onChange(of: lists.count) { _ in
                     updateFlag.toggle()
                 }
+                .onAppear {
+                    self.updateFlag.toggle()
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .principal) {
